@@ -1,0 +1,228 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Grumer App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="" />
+  <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+  <link href="css/style.css" rel='stylesheet' type='text/css' />
+  <link href='css/fonts.css' rel='stylesheet' type='text/css'/>
+  <link href='css/toastr.min.css' rel='stylesheet' type='text/css'/>
+  <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="js/responsiveslides.min.js"></script>
+  <script type="text/javascript" src="js/toastr.min.js"></script>
+  <script type="text/javascript" src="js/hover_pack.js"></script>
+</head>
+<body>
+  <div class="header">
+    <div class="header_top">
+      <div class="container-fluid">
+        <div class="logo">
+          <a href="index.html"><img src="images/logo.png" alt=""/></a>
+        </div>
+        <ul class="shopping_grid">
+          <!--a href="login.html">
+						<li>Login</li>
+					</a-->
+            <li class="card-shopping">
+                <span class="m_1">Carrito</span>&nbsp;&nbsp;<span id="lblCountCart">(0)</span>&nbsp;<img src="images/bag.png" alt=""/>
+                <div class="card-container">
+                  <div class="open-modal">
+                    <div id="divCartProducts">
+                    </div>
+                    <div class="row modal-summary">
+                      <div class="col-xs-6">
+                      </div>
+                      <div class="col-xs-3">
+                        <label>Total:</label>
+                      </div>
+                      <div class="col-xs-3">
+                        <label id="lblTotalSuns" class="pull-right">S/. 0.00</label>
+                      </div>
+                    </div>
+                    <div class="row modal-summary">
+                      <div class="col-xs-6">
+                      </div>
+                      <div class="col-xs-3">
+                        <label>Total:</label>
+                      </div>
+                      <div class="col-xs-3">
+                        <label id="lblTotalDollar" class="pull-right">$ 0.00</label>
+                      </div>
+                    </div>
+                    <div class="row modal-footerr">
+                      <div class="pull-right">
+                        <button id="btnCheckout" class="btn btn-primary btn-normal btn-inline" target="_self" title="Verificar">Verificar</button>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </li>
+          <div class="clearfix"> </div>
+        </ul>
+        <div class="clearfix"> </div>
+      </div>
+  </div>
+  <div class="h_menu4">
+    <!-- start h_menu4 -->
+    <div class="container-fluid">
+      <a class="toggleMenu" href="#">Menu</a>
+      <ul class="nav">
+        <li class="active"><a href="index.html" data-hover="Inicio">Inicio</a></li>
+        <li><a href="index.html?p=#" id="linkCatalogue" data-hover="Catálogo">Catálogo</a></li>
+        <li><a href="about.html" data-hover="Nosotros">Nosotros</a></li>
+        <li><a href="contact.html" data-hover="Contacto">Contacto</a></li>
+      </ul>
+      <script type="text/javascript" src="js/nav.js"></script>
+    </div>
+    <!-- end h_menu4 -->
+  </div>
+  </div>
+  <div id="divSlider" class="slider">
+    <div class="callbacks_container">
+      <ul class="rslides" id="slider">
+        <li><img src="images/banner1.jpg" class="img-responsive" alt="" />
+          <div class="banner_desc">
+            <h1>Maní</h1>
+            <h2>Descripción.</h2>
+          </div>
+        </li>
+        <li><img src="images/banner2.jpg" class="img-responsive" alt="" />
+          <div class="banner_desc">
+            <h1>Soya</h1>
+            <h2>Descripción.</h2>
+          </div>
+        </li>
+        <li><img src="images/banner3.jpg" class="img-responsive" alt="" />
+          <div class="banner_desc">
+            <h1>Ajonjolí</h1>
+            <h2>Descripción.</h2>
+          </div>
+        </li>
+        <li><img src="images/banner4.jpg" class="img-responsive" alt="" />
+          <div class="banner_desc">
+            <h1>Chia</h1>
+            <h2>Descripción.</h2>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="column_center">
+    <div class="container">
+      <div class="search">
+        <div class="stay">Buscar Producto</div>
+        <div class="stay_right">
+          <input type="text" id="txtSearch">
+          <input type="submit" value="" id="btnSearch">
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+      <div class="clearfix"> </div>
+    </div>
+  </div>
+  <div class="main">
+    <div class="content_top">
+      <div class="container-fluid">
+        <div class="col-md-3 sidebar_box">
+          <div class="sidebar">
+            <div class="menu_box">
+              <h3 class="menu_head">Menú Productos</h3>
+              <ul class="menu">
+                <li class="item1"><a href="#"><img class="arrow-img" src="images/f_menu.png" alt=""/>Maní</a>
+                  <ul class="cute">
+                    <li class="subitem1" data-id="2"><a href="#">Lista maní</a></li>
+                  </ul>
+                </li>
+                <li class="item2"><a href="#"><img class="arrow-img" src="images/f_menu.png" alt=""/>Soya</a>
+                  <ul class="cute">
+                    <li class="subitem1" data-id="1"><a href="#">Lista soya</a></li>
+                  </ul>
+                </li>
+                <li class="item3"><a href="#"><img class="arrow-img" src="images/f_menu.png" alt=""/>Ajonjolí</a>
+                  <ul class="cute">
+                    <li class="subitem1" data-id="4"><a href="#">Lista ajonjolí</a></li>
+                  </ul>
+                </li>
+                <li class="item4"><a href="#"><img class="arrow-img" src="images/f_menu.png" alt=""/>Chia</a>
+                  <ul class="cute">
+                    <li class="subitem1" data-id="3"><a href="#">Lista chia</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="delivery">
+            <img src="images/delivery.jpg" class="img-responsive" alt=""/>
+            <h3>Entregando</h3>
+            <h4>En Todo América</h4>
+          </div>
+          <div class="clients">
+            <h4>Importamos y comercializamos productos andinos en todo América.</h4>
+          </div>
+        </div>
+        <div class="col-md-9 content_right">
+          <div id="divProducts" class="row">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer_bg">
+  </div>
+  <div class="footer">
+    <div class="container">
+      <div class="col-md-3 f_grid1">
+        <h3>Acerca de</h3>
+        <a href="#"><img src="images/logo.png" alt=""/></a>
+        <p>Importamos y comercializamos productos andinos en todo América.</p>
+      </div>
+      <div class="col-md-3 f_grid1 f_grid2">
+        <h3>Síguenos</h3>
+        <ul class="social">
+          <li><a href="#"> <i class="fb"> </i><p class="m_3">Facebook</p><div class="clearfix"> </div></a></li>
+          <li><a href="#"><i class="tw"> </i><p class="m_3">Twittter</p><div class="clearfix"> </div></a></li>
+          <li><a href="#"><i class="google"> </i><p class="m_3">Google</p><div class="clearfix"> </div></a></li>
+          <li><a href="#"><i class="instagram"> </i><p class="m_3">Instagram</p><div class="clearfix"> </div></a></li>
+        </ul>
+      </div>
+      <div class="col-md-6 f_grid3">
+        <h3>Contacto</h3>
+        <ul class="list">
+          <li>
+            <p>Móvil: 996 166 669</p>
+          </li>
+          <li>
+            <p>Teléfono: 01 7562546</p>
+          </li>
+          <li>
+            <p>Email: <a href="#">empresagrumer@gmail.com</a></p>
+          </li>
+        </ul>
+        <ul class="list1">
+          <li>
+            <p>Lima - Jr. Pisagua Nro. 1086, La Victoria</p>
+						<p>Puno - Jr. Arica Nro. 761 (Al espalda de Essalud), Yunguyo</p>
+          </li>
+        </ul>
+        <div class="clearfix"> </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer_bottom">
+    <div class="container">
+      <div class="cssmenu">
+        <ul>
+          <li class="active"><a href="#">Soporte</a></li>
+        </ul>
+      </div>
+      <div class="copy">
+        <p>&copy; 2017 <a href="#">Grumer App</a></p>
+      </div>
+      <div class="clearfix"> </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="js/functions/functionIndex.js"></script>
+</body>
+</html>

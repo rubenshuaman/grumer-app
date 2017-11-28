@@ -1,0 +1,165 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Grumer App</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="" />
+	<script type="application/x-javascript">
+		addEventListener("load", function() {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<link href="css/style.css" rel='stylesheet' type='text/css' />
+	<link href='css/fonts.css' rel='stylesheet' type='text/css' />
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+</head>
+
+<body>
+	<div class="header">
+		<div class="header_top">
+			<div class="container-fluid">
+				<div class="logo">
+					<a href="index.html"><img src="images/logo.png" alt=""/></a>
+				</div>
+				<ul class="shopping_grid">
+					<!--a href="login.html">
+						<li>Login</li>
+					</a-->
+					<a href="#">
+						<li><!--span class="m_1">Carrito</span>&nbsp;&nbsp;(0) &nbsp;<img src="images/bag.png" alt="" /--></li>
+					</a>
+					<div class="clearfix"> </div>
+				</ul>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+		<div class="h_menu4">
+			<!-- start h_menu4 -->
+			<div class="container-fluid">
+				<a class="toggleMenu" href="#">Menu</a>
+				<ul class="nav">
+					<li><a href="index.html" data-hover="Inicio">Inicio</a></li>
+					<li><a href="index.html?p=#" id="linkCatalogue" data-hover="Catálogo">Catálogo</a></li>
+					<li><a href="about.html" data-hover="Nosotros">Nosotros</a></li>
+					<li class="active"><a href="contact.html" data-hover="Contacto">Contacto</a></li>
+				</ul>
+				<script type="text/javascript" src="js/nav.js"></script>
+			</div>
+			<!-- end h_menu4 -->
+		</div>
+	</div>
+	<div class="about">
+		<div class="container-fluid">
+			<div class="singel_right">
+				<div class="col-md-8">
+					<div class="contact-form">
+						<form method="post" action="">
+							<p class="comment-form-author"><label for="author">Nombre:</label>
+								<input type="text" class="textbox" placeholder="Ingrese su nombre"/>
+							</p>
+							<p class="comment-form-author"><label for="author">Correo:</label>
+								<input type="text" class="textbox" placeholder="Ingrese su correo"/>
+							</p>
+							<p class="comment-form-author"><label for="author">Mensage:</label>
+								<textarea placeholder="Ingrese su mensage"></textarea>
+							</p>
+							<button type="button" class="btn btn-primary">Enviar</button>
+						</form>
+					</div>
+				</div>
+				<div class="col-md-4 contact_right">
+					<h3>Dirección</h3>
+					<div class="address">
+						<i class="pin_icon"></i>
+						<div class="contact_address">
+							<p>Lima - Jr. Pisagua Nro. 1086, La Victoria</p>
+							<p>Puno - Jr. Arica Nro. 761 (Al espalda de Essalud), Yunguyo</p>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="address">
+						<i class="phone"></i>
+						<div class="contact_address">
+							996 166 669
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="address">
+						<i class="mail"></i>
+						<div class="contact_email">
+							<a href="#">empresagrumer@gmail.com</a>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="map">
+				<script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCuGMb6ZUQTnRDJIHL3Y0yEwSiGkBbiXOw'></script><div style='overflow:hidden;height:400px;width:100%;'><div id='gmap_canvas' style='height:400px;width:100%;'></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div> <a href='http://maps-website.com/es'>Maps-Generator</a> <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=4c37aaf1d3a492afa49058c1b6dd83220a984a6d'></script><script type='text/javascript'>function init_map(){var myOptions = {zoom:12,center:new google.maps.LatLng(-12.0689325,-77.01098960000002),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(-12.0689325,-77.01098960000002)});infowindow = new google.maps.InfoWindow({content:'<strong>Grumer S.A.C</strong><br>Jr. Pisagua 1086, La Victoria<br> Lima - Perú<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+			</div>
+
+		</div>
+	</div>
+	<div class="footer_bg">
+	</div>
+	<div class="footer">
+		<div class="container">
+			<div class="col-md-3 f_grid1">
+				<h3>Acerca de</h3>
+				<a href="#"><img src="images/logo.png" alt=""/></a>
+				<p>Importamos y comercializamos productos andinos en todo América.</p>
+			</div>
+			<div class="col-md-3 f_grid1 f_grid2">
+				<h3>Síguenos</h3>
+				<ul class="social">
+					<li><a href="#"> <i class="fb"> </i><p class="m_3">Facebook</p><div class="clearfix"> </div></a></li>
+					<li><a href="#"><i class="tw"> </i><p class="m_3">Twittter</p><div class="clearfix"> </div></a></li>
+					<li><a href="#"><i class="google"> </i><p class="m_3">Google</p><div class="clearfix"> </div></a></li>
+					<li><a href="#"><i class="instagram"> </i><p class="m_3">Instagram</p><div class="clearfix"> </div></a></li>
+				</ul>
+			</div>
+			<div class="col-md-6 f_grid3">
+				<h3>Contacto</h3>
+				<ul class="list">
+					<li>
+            <p>Móvil: 996 166 669</p>
+          </li>
+          <li>
+            <p>Teléfono: 01 7562546</p>
+          </li>
+          <li>
+            <p>Email: <a href="#">empresagrumer@gmail.com</a></p>
+          </li>
+				</ul>
+				<ul class="list1">
+					<li>
+						<p>Lima - Jr. Pisagua Nro. 1086, La Victoria</p>
+						<p>Puno - Jr. Arica Nro. 761 (Al espalda de Essalud), Yunguyo</p>
+					</li>
+				</ul>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<div class="footer_bottom">
+		<div class="container">
+			<div class="cssmenu">
+				<ul>
+					<li class="active"><a href="#">Soporte</a></li>
+				</ul>
+			</div>
+			<div class="copy">
+				<p>&copy; 2017 <a href="#">Grumer App</a></p>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+</body>
+
+</html>

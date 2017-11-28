@@ -1,0 +1,222 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Grumer App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="" />
+  <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+  <link href="css/wizard.css" rel='stylesheet' type='text/css' />
+  <link href='css/fonts.css' rel='stylesheet' type='text/css' />
+  <link href='css/dialog.css' rel='stylesheet' type='text/css' />
+  <link href='css/toastr.min.css' rel='stylesheet' type='text/css' />
+  <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/dialog.js"></script>
+  <script type="text/javascript" src="js/toastr.min.js"></script>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="container">
+      <div class="row row-top">
+        <div class="col-xs-3">
+          <img src="images/logo-bw.jpg" class="img-responsive pull-left" width="48" height="48" alt="" />
+        </div>
+        <div class="col-xs-6">
+          <h1 id="lblTitleCart" class="text-center">Revisar carrito de compras</h1>
+        </div>
+        <div class="col-xs-3">
+          <img src="images/security.jpg" class="img-responsive pull-right" width="92" height="65" alt="" />
+        </div>
+      </div>
+      <div class="row">
+        <section>
+          <div class="wizard">
+            <div class="wizard-inner">
+              <div class="connecting-line"></div>
+              <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active">
+                  <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="Revisar carrito de compras">
+                            <span class="round-tab">1</span>
+                        </a>
+                </li>
+                <li role="presentation" class="disabled">
+                  <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="Dirección de envío">
+                            <span class="round-tab">2</span>
+                        </a>
+                </li>
+                <li role="presentation" class="disabled">
+                  <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" title="Forma de pago">
+                            <span class="round-tab">3</span>
+                        </a>
+                </li>
+                <li role="presentation" class="disabled">
+                  <a href="#complete" data-toggle="tab" aria-controls="complete" role="tab" title="Confirmar">
+                            <span class="round-tab">4</span>
+                        </a>
+                </li>
+              </ul>
+            </div>
+            <form role="form">
+              <div class="tab-content">
+                <div class="tab-pane active" role="tabpanel" id="step1">
+                  <div class="table-responsive">
+                    <table id="tblProducts" class="table">
+                      <thead>
+                        <tr>
+                          <th>Producto</th>
+                          <th></th>
+                          <th>Cantidad</th>
+                          <th>Precio</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      </tbody>
+                      <tfoot>
+                        <tr>
+                          <td></td>
+                          <td></td>
+                          <td>Total:</td>
+                          <td id="lblTotalSun">S/. 0.00</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td></td>
+                          <td>Total:</td>
+                          <td id="lblTotalDollar">$ 0.00</td>
+                          <td></td>
+                        </tr>
+                      </tfoot>
+                    </table>
+                  </div>
+                  <ul class="list-inline pull-right">
+                    <li><a href="index.html?p=#" class="btn btn-default">INICIO</a></li>
+                    <li><button type="button" id="btnShoppingCart" class="btn btn-primary next-step">Continuar</button></li>
+                  </ul>
+                </div>
+                <div class="tab-pane" role="tabpanel" id="step2">
+                  <form>
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label">Nombres:</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control" id="txtName" placeholder="Nombres">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label">Apellidos:</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control" id="txtSurname" placeholder="Apellidos">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label">DNI:</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control" id="txtDni" placeholder="DNI" maxlength="12">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label">Teléfono:</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control" id="txtPhone" placeholder="Teléfono" maxlength="15">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label">Correo:</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control" id="txtEmail" placeholder="Correo">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label">Ciudad:</label>
+                      <div class="col-sm-8">
+                        <input type="text" class="form-control" id="txtCity" placeholder="Ciudad">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label">País:</label>
+                      <div class="col-sm-8">
+                        <select id="slcCountry" class="form-control">
+                          <option value="0">Seleccione</option>
+                          <option value="Argentina">Argentina</option>
+                          <option value="Bolivia">Bolivia</option>
+                          <option value="Brasil">Brasil</option>
+                          <option value="Chile">Chile</option>
+                          <option value="Colombia">Colombia</option>
+                          <option value="Ecuador">Ecuador</option>
+                          <option value="Paraguay">Paraguay</option>
+                          <option value="Perú">Perú</option>
+                          <option value="Uruguay">Uruguay</option>
+                          <option value="Venezuela">Venezuela</option>
+                          </select>
+                      </div>
+                    </div>
+                  </form>
+                  <div class="clearfix"></div>
+                  <ul class="list-inline pull-right">
+                    <li><button type="button" id="btnShippingAddressBack" class="btn btn-default prev-step">ANTERIOR</button></li>
+                    <li><button type="button" id="btnShippingAddress" class="btn btn-primary next-step">Continuar</button></li>
+                  </ul>
+                </div>
+                <div class="tab-pane" role="tabpanel" id="step3">
+                  <p>Por el momento solo soporta la siguiente forma de pago:</p>
+                  <div class="form-group form-check">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="optionsRadio" value="option1" checked>
+                      Contra entrega
+                    </label>
+                  </div>
+                  <ul class="list-inline pull-right">
+                    <li><button type="button" id="btnPaymentMethodBack" class="btn btn-default prev-step">ANTERIOR</button></li>
+                    <li><button type="button" id="btnPaymentMethod" class="btn btn-primary next-step">Continuar</button></li>
+                  </ul>
+                </div>
+                <div class="tab-pane" role="tabpanel" id="complete">
+                  <div class="table-responsive">
+                    <table id="tblProductss" class="table">
+                      <thead>
+                        <tr>
+                          <th>Producto</th>
+                          <th></th>
+                          <th>Cantidad</th>
+                          <th>Precio</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      </tbody>
+                      <tfoot>
+                        <tr>
+                          <td></td>
+                          <td></td>
+                          <td>Total:</td>
+                          <td id="lblTotalSunn">S/. 0.00</td>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td></td>
+                          <td>Total:</td>
+                          <td id="lblTotalDollarr">$ 0.00</td>
+                        </tr>
+                      </tfoot>
+                    </table>
+                  </div>
+                  <ul class="list-inline pull-right">
+                    <li><button type="button" id="btnConfirmBack" class="btn btn-default prev-step">ANTERIOR</button></li>
+                    <li><button type="button" id="btnConfirm" class="btn btn-primary btn-info-full next-step">Confirmar</button></li>
+                  </ul>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/functions/functionReservation.js"></script>
+  </div>
+  </div>
+
+</html>

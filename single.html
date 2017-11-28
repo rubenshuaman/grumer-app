@@ -1,0 +1,255 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Grumer App</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="n" />
+	<link href="css/bootstrap.css" rel='stylesheet' type='text/css'/>
+	<link href="css/style.css" rel='stylesheet' type='text/css'/>
+	<link href='css/fonts.css' rel='stylesheet' type='text/css'/>
+	<link href='css/toastr.min.css' rel='stylesheet' type='text/css'/>
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="js/hover_pack.js"></script>
+	<script type="text/javascript" src="js/toastr.min.js"></script>
+	<link rel="stylesheet" href="css/etalage.css">
+	<script src="js/jquery.etalage.min.js"></script>
+	<script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
+</head>
+<body>
+	<div class="header">
+		<div class="header_top">
+			<div class="container-fluid">
+				<div class="logo">
+					<a href="index.html"><img src="images/logo.png" alt=""/></a>
+				</div>
+				<ul class="shopping_grid">
+					<!--a href="login.html">
+						<li>Login</li>
+					</a-->
+					<li class="card-shopping">
+							<span class="m_1">Carrito</span>&nbsp;&nbsp;<span id="lblCountCart">(0)</span>&nbsp;<img src="images/bag.png" alt=""/>
+							<div class="card-container">
+								<div class="open-modal">
+									<div id="divCartProducts">
+									</div>
+									<div class="row modal-summary">
+										<div class="col-xs-6">
+										</div>
+										<div class="col-xs-3">
+											<label>Total:</label>
+										</div>
+										<div class="col-xs-3">
+											<label id="lblTotalSuns" class="pull-right">S/. 0.00</label>
+										</div>
+									</div>
+									<div class="row modal-summary">
+										<div class="col-xs-6">
+										</div>
+										<div class="col-xs-3">
+											<label>Total:</label>
+										</div>
+										<div class="col-xs-3">
+											<label id="lblTotalDollar" class="pull-right">$ 0.00</label>
+										</div>
+									</div>
+									<div class="row modal-footerr">
+										<div class="pull-right">
+											<button id="btnCheckout" class="btn btn-primary btn-normal btn-inline" target="_self" title="Verificar">Verificar</button>
+										</div>
+									</div>
+								</div>
+						</div>
+					</li>
+					<div class="clearfix"> </div>
+				</ul>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+		<div class="h_menu4">
+			<!-- start h_menu4 -->
+			<div class="container-fluid">
+				<a class="toggleMenu" href="#">Menu</a>
+				<ul class="nav">
+					<li><a href="index.html" data-hover="Inicio">Inicio</a></li>
+	        <li><a href="index.html?p=#" id="linkCatalogue" data-hover="Catálogo">Catálogo</a></li>
+	        <li><a href="about.html" data-hover="Nosotros">Nosotros</a></li>
+	        <li><a href="contact.html" data-hover="Contacto">Contacto</a></li>
+				</ul>
+				<script type="text/javascript" src="js/nav.js"></script>
+			</div>
+			<!-- end h_menu4 -->
+		</div>
+	</div>
+	<div class="main">
+		<div class="content_top">
+			<div class="container-fluid">
+				<div class="col-md-3 sidebar_box">
+					<div class="delivery">
+						<img src="images/delivery.jpg" class="img-responsive" alt=""/>
+						<h3>Entregando</h3>
+            <h4>En Todo América</h4>
+					</div>
+					<div class="clients">
+						<h4>Importamos y comercializamos productos andinos en todo América.</h4>
+					</div>
+				</div>
+				<div class="col-md-9 single_right">
+					<div class="single_top">
+						<div class="single_grid">
+							<div class="grid images_3_of_2">
+								<ul id="etalage">
+									<li>
+										<img class="etalage_thumb_image" id="imgEtalage1" src="" class="img-responsive"/>
+										<img class="etalage_source_image" id="imgEtalage2" src="" class="img-responsive" title=""/>
+									</li>
+									<li>
+										<img class="etalage_thumb_image" id="imgEtalage3" src="" class="img-responsive"/>
+										<img class="etalage_source_image" id="imgEtalage4" src="" class="img-responsive" title=""/>
+									</li>
+								</ul>
+								<div class="clearfix"></div>
+							</div>
+							<div class="desc1 span_3_of_2">
+								<h1 id="lblProduct"></h1>
+								<div class="quantity_box">
+									<ul class="product-qty">
+										<span>Precio:</span>
+									</ul>
+									<div class="clearfix"></div>
+								</div>
+								<div class="price_single">
+									<span id="lblPrice" class="actual"></span>
+								</div>
+								<div class="quantity_box">
+									<ul class="product-qty">
+										<span>Tamaño:</span>
+										<select id="slctMeasure">
+									 		<option value="1">Kilo</option>
+									 		<option value="2">Tonelada</option>
+								   	</select>
+									</ul>
+									<div class="clearfix"></div>
+								</div>
+								<div class="quantity_box">
+									<ul class="product-qty">
+										<span>Cantidad:</span>
+										<input id="txtQuantity" type="text" class="text-quantity" maxlength="4"/>
+									</ul>
+									<div class="clearfix"></div>
+								</div>
+								<button id="btnReservation" title="Comprar" class="btn bt1 btn-primary btn-normal btn-inline">Comprar</button>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="sap_tabs">
+						<div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
+							<ul class="resp-tabs-list">
+								<li class="resp-tab-item" aria-controls="tab_item-0" role="tab"><span>Descripción</span></li>
+								<li class="resp-tab-item" aria-controls="tab_item-1" role="tab"><span>Información Adicional</span></li>
+								<div class="clear"></div>
+							</ul>
+							<div class="resp-tabs-container">
+								<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
+									<div class="facts">
+										<ul class="tab_list">
+											<li id="liDescription"></li>
+									</div>
+								</div>
+								<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
+									<div class="facts">
+										<ul class="tab_list">
+											<div class="table-responsive">
+												<table class="table">
+													<thead>
+														<tr>
+															<th>Contenido</th>
+															<th>25kg</th>
+															<th>50kg</th>
+															<th>250kg</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+		                          <td>Presentación</td>
+		                          <td>Bolsa de Yute o Polipropileno</td>
+		                          <td>Bolsa de Yute o Polipropileno</td>
+		                          <td>Big Bags</td>
+		                        </tr>
+													</tbody>
+												</table>
+											</div>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<h3 class="single_head">Productos Relacionados</h3>
+					<div id="divProducts" class="row">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer_bg">
+	</div>
+	<div class="footer">
+		<div class="container">
+			<div class="col-md-3 f_grid1">
+				<h3>Acerca de</h3>
+				<a href="#"><img src="images/logo.png" alt=""/></a>
+				<p>Importamos y comercializamos productos andinos en todo América.</p>
+			</div>
+			<div class="col-md-3 f_grid1 f_grid2">
+				<h3>Síguenos</h3>
+				<ul class="social">
+					<li><a href="#"> <i class="fb"> </i><p class="m_3">Facebook</p><div class="clearfix"> </div></a></li>
+					<li><a href="#"><i class="tw"> </i><p class="m_3">Twittter</p><div class="clearfix"> </div></a></li>
+					<li><a href="#"><i class="google"> </i><p class="m_3">Google</p><div class="clearfix"> </div></a></li>
+					<li><a href="#"><i class="instagram"> </i><p class="m_3">Instagram</p><div class="clearfix"> </div></a></li>
+				</ul>
+			</div>
+			<div class="col-md-6 f_grid3">
+				<h3>Contacto</h3>
+				<ul class="list">
+					<li>
+            <p>Móvil: 996 166 669</p>
+          </li>
+          <li>
+            <p>Teléfono: 01 7562546</p>
+          </li>
+          <li>
+            <p>Email: <a href="#">empresagrumer@gmail.com</a></p>
+          </li>
+				</ul>
+				<ul class="list1">
+					<li>
+						<p>Lima - Jr. Pisagua Nro. 1086, La Victoria</p>
+						<p>Puno - Jr. Arica Nro. 761 (Al espalda de Essalud), Yunguyo</p>
+					</li>
+				</ul>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<div class="footer_bottom">
+		<div class="container">
+			<div class="cssmenu">
+				<ul>
+					<li class="active"><a href="#">Soporte</a></li>
+				</ul>
+			</div>
+			<div class="copy">
+				<p>&copy; 2017 <a href="#">Grumer App</a></p>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/functions/functionSingle.js"></script>
+</body>
+
+</html>
